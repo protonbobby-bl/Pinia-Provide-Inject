@@ -1,7 +1,7 @@
 <template>
-  <div class="p-2 m-4 text-5xl border border-white">
+  <div class="p-2 m-4 text-5xl border border-white mb-16">
     <div class="flex items-center gap-2">
-      <label>Parent Component</label>
+      <label>{{message}}</label>
       <button
         class="m-2 block bg-green-500 text-white border border-opacity-0 rounded-lg px-3 py-1.5 text-sm font-medium self-center w-max"
         @click="store.increment"
@@ -24,6 +24,11 @@ import { useCounterStore } from "../stores/counter";
 export default {
   components: {
     childA,
+  },
+  props: {
+    message: {
+      type: String,
+    },
   },
   setup() {
     const store = useCounterStore();
