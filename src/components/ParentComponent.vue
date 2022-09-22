@@ -32,8 +32,8 @@ export default {
   },
   setup() {
     const store = useCounterStore();
-
-    provide("parent", store);
+    
+    provide("storeContext", store);
     
     return {
       store,

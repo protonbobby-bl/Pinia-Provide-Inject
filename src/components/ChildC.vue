@@ -14,9 +14,10 @@
 
 <script>
 import { inject } from "vue";
+
 export default {
   setup() {
-    const store = inject("parent");
+    const store = inject("storeContext");
     
     return {
       store,
